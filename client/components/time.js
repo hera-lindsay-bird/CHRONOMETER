@@ -56,6 +56,6 @@ export function powerType(time) {
   ) {
     return 'Weaver (PM)'
   } else {
-    return 'no power'
+    return ''
   }
 }

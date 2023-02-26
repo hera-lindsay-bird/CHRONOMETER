@@ -1,7 +1,7 @@
 body {
-  background-color: rgb(239, 240, 240);
+  background-color: rgb(255, 255, 255);
   text-align: center;
-  color: black;
+  color: rgb(0, 0, 0);
   line-height: 1.8;
   margin: 75px;
   font-family: 'Libre Caslon Text', serif;
@@ -56,7 +56,7 @@ body {
 }
 
 .scheme {
-  background-color: #fb0094;
+  background-color: #ffffff;
   flex-direction: row;
   margin: 10px;
   padding: 20px;
@@ -70,7 +70,7 @@ body {
 
 
 .onthisdaydiv {
-  background-color: #fbfade;
+  background-color: #ffffff;
   margin: 10%;
   padding: 8%;
   font-size: 10px;
@@ -130,48 +130,4 @@ body {
   color: #0055ff;
   display: flex;
   justify-content: center;
-}
-
-.catBorder:before,
-.catBorder:after {
-  content: '';
-  position: absolute;
-  left: -2px;
-  top: -2px;
-  background: linear-gradient(45deg, #e6fad5, #ffdfe0, #e7f0fd, #f5dffc, #ffe3e3, #ffebe2,
-      #e8e8fb, #e8fce8, #fdfdf1, #fee6e6);
-  background-size: 400%;
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  border-radius: 50%;
-  z-index: -1;
-  animation: steam 20s linear infinite;
-}
-
-@keyframes steam {
-  0% {
-    background-position: 0 0;
-  }
-
-  50% {
-    background-position: 400% 0;
-  }
-
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.catBorder:after {
-  filter: blur(50px);
-}
-
-/* THIS IS THE IMAGE BELOW */
-.catBorder {
-  display: catBorder;
-  margin: auto;
-  border-radius: 0%;
-  width: auto;
-  object-fit: cover;
-
 }

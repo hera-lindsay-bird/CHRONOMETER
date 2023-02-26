@@ -22,8 +22,8 @@ function Flag(props) {
       })
   }, [props.rgbcolor])
 
-  if (isLoading) return <h1>Loading</h1>
-  if (isError) return <h1>{'Oops no color!'}</h1>
+  if (isLoading) return <h1>THE CHRONOMETER IS THINKING</h1>
+  if (isError) return <h1>{'UHOH!'}</h1>
 
   return (
     <div>

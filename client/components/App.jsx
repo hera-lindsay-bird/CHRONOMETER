@@ -11,7 +11,6 @@ import History from './History'
 import { weekday } from './weekday'
 import Day from './Day'
 import Scheme from './Scheme'
-import { symbol } from 'd3'
 const userId = uuid()
 console.log('userId', userId)
 
@@ -75,24 +74,16 @@ function App() {
   }, [])
 
   return (
-    <div className="page">
-      <div className="catBorder">
+    <div className="page catBorder">
+      <div className="">
         <main>
-          <div className="detailsdiv">
-            <h2>ENTER YOUR DETAILS ⏳</h2>
+          <div className="">
+            <h2>ENTER YOUR DAY AND TIME OF BIRTH ⏳</h2>
             <AddUserForm onAddUser={handleAddUser} />
           </div>
 
-          <h2>THE CHRONOMETER HAS SPOKEN</h2>
-
           {rgbValue && <Flag rgbcolor={rgbValue} />}
-          <h3>
-            Time: {hourMinute}
-            <br></br>
-            Month: {numericalBirthMonth}
-            <br></br>
-            Day: {numericalBirthDay}
-          </h3>
+
           <h3>Power: {finalPower}</h3>
           <h3>Animal Sign: {animal}</h3>
           <h3>Element: {element}</h3>
@@ -127,27 +118,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="resultstdlr">
-            <h3>INTERPRETING YOUR RESULTS</h3>
-            <p>
-              <strong>WALKER:</strong> The power to <strong>walk</strong>{' '}
-              through time
-            </p>
-            <p>
-              <strong>WEAVER: </strong>
-              The power to manipulate the temporal properties of
-              <strong> physical matter</strong>
-            </p>
-            <p>
-              <strong>WITNESS:</strong> The power of foresight, hindsight and
-              other kinds of
-              <strong> temporal based divination</strong>
-            </p>
-            <p>
-              <strong>WIT:</strong> The power to read memories, and
-              <strong> manipulate perceptions of temporality </strong>
-            </p>
-          </div>
+
           <div className="onthisdaydiv">
             {numericalBirthMonth && (
               <History month={numericalBirthMonth} day={numericalBirthDay} />

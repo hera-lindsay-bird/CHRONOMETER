@@ -205,6 +205,6 @@ export function animalType(month, power) {
   } else if (power === 'Witness/Wit' || power === 'Witness/Wit') {
     return 'griffin'
   } else {
-    return 'no power'
+    return ''
   }
 }
